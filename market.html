@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسواق العالمية | إيداع المالية 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#0B1F3B',
+                            dark: '#061224',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0B1F3B; color: white; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .text-gold-gradient { background: linear-gradient(135deg, #F3E5AB, #D4AF37, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .edaa-icon { display: flex; flex-direction: column; gap: 3px; transform: skewX(-12deg); }
+        .edaa-bar { width: 26px; height: 5px; background: linear-gradient(90deg, #D4AF37, #F3E5AB); border-radius: 2px; }
+        .mobile-menu-active { transform: translateX(0) !important; }
+        .market-card:hover img { transform: scale(1.1); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+
+<body class="overflow-x-hidden text-right">
+
+
+<div id="menu-container"></div>
+
+<script>
+fetch("menu.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+
+    // re-bind JS after menu loads
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('invisible', 'opacity-0');
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('invisible', 'opacity-0');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+});
+</script>
+
+    <section class="relative pt-48 pb-24 bg-brand-dark overflow-hidden text-center">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.05)_0%,_transparent_70%)]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Global Asset Class Access</h2>
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-8">استثمر في <span class="text-gold-gradient">العالم بأكمله</span></h1>
+            <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">بوابة واحدة تمنحك إمكانية التداول في أكثر من 1,400 أصل مالي عالمي، مع سيولة عميقة وظروف تداول تنافسية للغاية.</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-base">
+        <div class="max-w-7xl mx-auto px-6 space-y-32">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest">Forex Trading</div>
+                    <h3 class="text-4xl font-extrabold text-white">سوق العملات <span class="text-brand-gold">الأجنبية</span></h3>
+                    <p class="text-slate-400 leading-relaxed text-lg text-justify">تداول في أكبر سوق مالي في العالم بحجم تداول يومي يتجاوز 6 تريليون دولار. نحن نوفر لك وصولاً مباشراً لأكثر من 60 زوجاً من العملات، بما في ذلك الأزواج الرئيسية (Majors)، الثانوية (Minors)، والنادرة (Exotics).</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-2xl border border-white/5"><div class="text-brand-gold font-bold mb-1">0.0 Pips</div><div class="text-[10px] text-slate-500 uppercase tracking-widest">أقل سبريد</div></div>
+                        <div class="glass-card p-6 rounded-2xl border border-white/5"><div class="text-brand-gold font-bold mb-1">1:400</div><div class="text-[10px] text-slate-500 uppercase tracking-widest">رافعة مالية قصوى</div></div>
+                    </div>
+                </div>
+                <div class="relative market-card group overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064" class="w-full h-[450px] object-cover transition-transform duration-[2000ms]" alt="Forex">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="lg:order-2 space-y-8">
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest">Hard & Soft Commodities</div>
+                    <h3 class="text-4xl font-extrabold text-white">السلع <span class="text-brand-gold">والطاقة</span></h3>
+                    <p class="text-slate-400 leading-relaxed text-lg text-justify">نوّع محفظتك الاستثمارية بالتداول في الملاذات الآمنة ومنتجات الطاقة. تداول الذهب (Spot Gold)، الفضة، والنفط الخام (Brent & WTI) بمرونة عالية، مع الاستفادة من التقلبات السعرية العالمية.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-white font-medium"><span class="w-2 h-2 bg-brand-gold rounded-full"></span> عقود الذهب الفورية والآجلة</li>
+                        <li class="flex items-center gap-4 text-white font-medium"><span class="w-2 h-2 bg-brand-gold rounded-full"></span> الغاز الطبيعي والنفط</li>
+                        <li class="flex items-center gap-4 text-white font-medium"><span class="w-2 h-2 bg-brand-gold rounded-full"></span> السلع الزراعية (القهوة، السكر)</li>
+                    </ul>
+                </div>
+                <div class="lg:order-1 relative market-card group overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1518544862322-b44c802b66d3?q=80&w=2070" class="w-full h-[450px] object-cover transition-transform duration-[2000ms]" alt="Commodities">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest">Global Indices</div>
+                    <h3 class="text-4xl font-extrabold text-white">المؤشرات <span class="text-brand-gold">العالمية</span></h3>
+                    <p class="text-slate-400 leading-relaxed text-lg text-justify">تداول على أداء أقوى الاقتصادات في العالم. من خلال مؤشرات الأسهم، يمكنك الاستثمار في سلة كاملة من الشركات القيادية (مثل الشركات الأمريكية أو الألمانية) بصفقة واحدة فقط.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-6 py-3 glass-card rounded-xl text-sm font-bold border border-white/10 hover:border-brand-gold transition cursor-default text-white">S&P 500</span>
+                        <span class="px-6 py-3 glass-card rounded-xl text-sm font-bold border border-white/10 hover:border-brand-gold transition cursor-default text-white">Dow Jones</span>
+                        <span class="px-6 py-3 glass-card rounded-xl text-sm font-bold border border-white/10 hover:border-brand-gold transition cursor-default text-white">Nasdaq 100</span>
+                        <span class="px-6 py-3 glass-card rounded-xl text-sm font-bold border border-white/10 hover:border-brand-gold transition cursor-default text-white">DAX 40</span>
+                    </div>
+                </div>
+                <div class="relative market-card group overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=2070" class="w-full h-[450px] object-cover transition-transform duration-[2000ms]" alt="Indices">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="lg:order-2 space-y-8">
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest">Equity Markets</div>
+                    <h3 class="text-4xl font-extrabold text-white">الأسهم <span class="text-brand-gold">الدولية</span></h3>
+                    <p class="text-slate-400 leading-relaxed text-lg text-justify">امتلك حصصاً في كبرى الشركات العالمية والناشئة. نوفر لك الوصول لأكثر من 600 سهم من البورصات الأمريكية، الأوروبية، والآسيوية بعمولات صفرية أو منخفضة جداً، مع توزيعات أرباح (Dividends) حقيقية.</p>
+                    <div class="p-8 glass-card rounded-3xl border border-white/10">
+                        <div class="flex justify-between items-center text-white mb-6">
+                            <span class="font-bold">أشهر الأسهم المتاحة:</span>
+                            <span class="text-brand-gold text-xs uppercase font-bold tracking-widest">Live execution</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-slate-400 text-sm">
+                            <div>• Apple (AAPL)</div>
+                            <div>• Tesla (TSLA)</div>
+                            <div>• Amazon (AMZN)</div>
+                            <div>• Microsoft (MSFT)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:order-1 relative market-card group overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070" class="w-full h-[450px] object-cover transition-transform duration-[2000ms]" alt="Stocks">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px] rounded-full"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-6">₿</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">العملات الرقمية (Crypto)</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">تداول البيتكوين (BTC)، الإيثيريوم (ETH)، والريبل (XRP) كعقود فروقات (CFDs). استفد من الصعود والهبوط في السوق دون الحاجة لامتلاك محفظة رقمية معقدة.</p>
+                    <div class="flex gap-3 text-[10px] uppercase font-bold text-blue-400 tracking-widest">
+                        <span>24/7 Trading</span>
+                        <span>•</span>
+                        <span>1:5 Leverage</span>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/10 blur-[50px] rounded-full"></div>
+                <div class="relative z-10">
+                    <div class="text-4xl mb-6">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">صناديق الاستثمار (ETFs)</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">استثمر في سلال من الأصول المتنوعة لتقليل المخاطر. نوفر لك الوصول لأشهر الصناديق المتداولة مثل iShares و Vanguard لتنويع محفظتك طويلة الأمد.</p>
+                    <div class="flex gap-3 text-[10px] uppercase font-bold text-green-400 tracking-widest">
+                        <span>Low Fees</span>
+                        <span>•</span>
+                        <span>Diversified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-base">
+        <div class="max-w-5xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">شروط تداول <span class="text-gold-gradient">تنافسية</span></h3>
+            <div class="overflow-x-auto no-scrollbar">
+                <table class="w-full text-right border-collapse glass-card rounded-[2rem] overflow-hidden min-w-[700px]">
+                    <thead>
+                        <tr class="bg-white/5 border-b border-white/10 text-brand-gold text-xs uppercase tracking-widest">
+                            <th class="p-6">الأصل المالي</th>
+                            <th class="p-6">السبريد المتوسط</th>
+                            <th class="p-6">الرافعة المالية</th>
+                            <th class="p-6">أوقات التداول</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-300 divide-y divide-white/5">
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-bold text-white">EUR/USD</td><td class="p-6 text-green-400">0.1 Pips</td><td class="p-6">1:400</td><td class="p-6">24/5</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-bold text-white">GBP/USD</td><td class="p-6 text-green-400">0.4 Pips</td><td class="p-6">1:400</td><td class="p-6">24/5</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-bold text-white">الذهب (XAUUSD)</td><td class="p-6 text-brand-gold">15 Cents</td><td class="p-6">1:200</td><td class="p-6">23/5</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-bold text-white">النفط (USOil)</td><td class="p-6 text-green-400">0.03 Pips</td><td class="p-6">1:100</td><td class="p-6">23/5</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-bold text-white">Bitcoin (BTC)</td><td class="p-6 text-white">$15</td><td class="p-6">1:5</td><td class="p-6">24/7</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-16 text-center">توقيت <span class="text-brand-gold">الأسواق العالمية</span></h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-8 rounded-3xl glass-card border-b-4 border-slate-700">
+                    <div class="text-xl font-black mb-2 text-white">سيدني</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Opens 22:00 GMT</div>
+                </div>
+                <div class="p-8 rounded-3xl glass-card border-b-4 border-slate-700">
+                    <div class="text-xl font-black mb-2 text-white">طوكيو</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Opens 00:00 GMT</div>
+                </div>
+                <div class="p-8 rounded-3xl glass-card border-b-4 border-brand-gold">
+                    <div class="text-xl font-black mb-2 text-brand-gold">لندن</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Opens 08:00 GMT</div>
+                </div>
+                <div class="p-8 rounded-3xl glass-card border-b-4 border-brand-gold">
+                    <div class="text-xl font-black mb-2 text-brand-gold">نيويورك</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Opens 13:00 GMT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative bg-brand-dark/50 border-t border-white/5 pt-24 pb-12 overflow-hidden text-right">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20 text-right">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="edaa-icon"><div class="edaa-bar"></div><div class="edaa-bar" style="opacity: 0.7"></div><div class="edaa-bar" style="opacity: 0.4"></div></div>
+                        <span class="text-3xl font-bold text-white tracking-tight">إيداع</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-8 max-w-sm">المنصة الرائدة في حلول التداول المؤسسي. نوفر وصولاً مباشراً لأكثر من 1400 أصل مالي عالمي بأقل زمن استجابة وأعلى مستويات الأمان.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-brand-gold rounded-full"></span> الأسواق</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-brand-gold transition underline-offset-8">سوق العملات</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition underline-offset-8">الذهب والمعادن</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition underline-offset-8">العملات الرقمية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-blue-500 rounded-full"></span> القانونية</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400 transition">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-green-500 rounded-full animate-pulse"></span> النشرة البريدية</h4>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="البريد الإلكتروني" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none">
+                        <button class="w-full bg-brand-gold text-brand-dark font-black py-3 rounded-xl text-xs transition-all shadow-xl shadow-brand-gold/10">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 py-12">
+                <div class="bg-red-500/5 rounded-[2rem] p-8 border border-red-500/10 backdrop-blur-sm">
+                    <div class="flex items-center gap-3 text-red-400 mb-4 font-bold text-sm">⚠️ تحذير المخاطر العالية</div>
+                    <p class="text-slate-500 text-[11px] leading-7 text-justify">التداول في الأدوات المالية والعملات الأجنبية ينطوي على مخاطر عالية لخسارة رأس المال وقد لا يكون مناسباً لجميع فئات المستثمرين. الرافعة المالية هي سلاح ذو حدين، فقد تعمل لصالحك أو ضدك بشكل مضاعف.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-500 font-medium opacity-60">
+                <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full border border-brand-gold/10">Regulated Broker</span>
+                <span>&copy; 2026 شركة إيداع المالية. جميع الحقوق محفوظة.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu');
+        function toggleMenu() { mobileMenu.classList.toggle('mobile-menu-active'); }
+        openBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+
+</body>
+</html>

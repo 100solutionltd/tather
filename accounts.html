@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع الحسابات | إيداع 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#0B1F3B',
+                            dark: '#061224',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0B1F3B; color: white; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .text-gold-gradient { background: linear-gradient(135deg, #F3E5AB, #D4AF37, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .edaa-icon { display: flex; flex-direction: column; gap: 3px; transform: skewX(-12deg); }
+        .edaa-bar { width: 26px; height: 5px; background: linear-gradient(90deg, #D4AF37, #F3E5AB); border-radius: 2px; }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+
+<div id="menu-container"></div>
+
+<script>
+fetch("menu.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+
+    // re-bind JS after menu loads
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('invisible', 'opacity-0');
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('invisible', 'opacity-0');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+});
+</script>
+
+    <section class="relative pt-48 pb-24 bg-brand-dark overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-brand-gold font-bold tracking-[0.4em] uppercase text-xs mb-4">Tailored Trading Experience</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">حلول تداول <br><span class="text-gold-gradient">تناسب طموحك</span></h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">اكتشف الفرق مع حسابات تداول صُممت لتمنحك وصولاً مباشراً للسيولة العالمية بأقل زمن استجابة ممكن.</p>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 bg-brand-base relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div class="glass-card rounded-[2.5rem] p-10 flex flex-col border border-white/5 group hover:border-brand-gold/20 transition-all duration-500">
+                <div class="mb-8">
+                    <span class="text-slate-500 font-bold tracking-widest uppercase text-[10px]">Entry Level</span>
+                    <h3 class="text-3xl font-bold text-white mt-2">الحساب الفضي</h3>
+                </div>
+                <div class="flex items-baseline gap-1 mb-8 border-b border-white/5 pb-8">
+                    <span class="text-5xl font-black text-white">$500</span>
+                    <span class="text-slate-500 text-sm">/ إيداع أدنى</span>
+                </div>
+                <ul class="space-y-5 mb-12 flex-grow">
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> سبريد منخفض يبدأ من 1.2 نقطة</li>
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> رافعة مالية مرنة 1:400</li>
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> تنفيذ أوامر فوري (STP)</li>
+                    <li class="flex items-center gap-3 text-slate-500 text-sm opacity-50"><span class="text-slate-600">○</span> مدير حساب مخصص</li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl border border-white/20 text-white font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">فتح حساب فضي</button>
+            </div>
+
+            <div class="relative rounded-[2.5rem] p-10 bg-gradient-to-b from-brand-gold/20 to-brand-dark border-2 border-brand-gold shadow-[0_0_60px_-15px_rgba(212,175,55,0.3)] transform md:scale-110 z-10 flex flex-col">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 rounded-full text-[10px] font-black tracking-widest uppercase">الأكثر اختياراً</div>
+                <div class="mb-8 text-center">
+                    <span class="text-brand-gold font-bold tracking-widest uppercase text-[10px]">Professional Choice</span>
+                    <h3 class="text-4xl font-bold text-white mt-2">الحساب الذهبي</h3>
+                </div>
+                <div class="text-center mb-8 border-b border-brand-gold/20 pb-8">
+                    <div class="text-6xl font-black text-white">$5,000</div>
+                    <p class="text-brand-gold/60 text-xs mt-2 font-bold uppercase">Raw Spreads Account</p>
+                </div>
+                <ul class="space-y-5 mb-12 flex-grow">
+                    <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> سبريد يبدأ من 0.0 نقطة</li>
+                    <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> أولوية قصوى في معالجة السحب</li>
+                    <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> مدير حساب خاص متاح 24/5</li>
+                    <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> إشارات تداول يومية حصرية</li>
+                </ul>
+                <button class="w-full py-5 rounded-2xl bg-brand-gold text-brand-dark font-black hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-xl">ابدأ التداول الاحترافي</button>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] p-10 flex flex-col border border-white/5 group hover:border-brand-gold/20 transition-all duration-500">
+                <div class="mb-8">
+                    <span class="text-slate-500 font-bold tracking-widest uppercase text-[10px]">Institutional</span>
+                    <h3 class="text-3xl font-bold text-white mt-2">الحساب البلاتيني</h3>
+                </div>
+                <div class="flex items-baseline gap-1 mb-8 border-b border-white/5 pb-8">
+                    <span class="text-5xl font-black text-white">$20k+</span>
+                    <span class="text-slate-500 text-sm">/ كبار المستثمرين</span>
+                </div>
+                <ul class="space-y-5 mb-12 flex-grow">
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> عمولات صفرية بالكامل</li>
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> الوصول المباشر لغرفة التداول</li>
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> دعوات خاصة لفعالياتنا السنوية</li>
+                    <li class="flex items-center gap-3 text-slate-300 text-sm"><span class="text-brand-gold">●</span> خادم (VPS) مجاني فائق السرعة</li>
+                </ul>
+                <button class="w-full py-4 rounded-2xl border border-white/20 text-white font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">تواصل مع النخبة</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="py-32 bg-brand-dark px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Detailed Specifications</h3>
+                <h2 class="text-4xl font-extrabold text-white">جدول المقارنة التقني</h2>
+            </div>
+            
+            <div class="overflow-x-auto no-scrollbar">
+                <table class="w-full text-right border-collapse glass-card rounded-[2rem] overflow-hidden min-w-[800px]">
+                    <thead>
+                        <tr class="bg-white/5 border-b border-white/10">
+                            <th class="p-8 text-lg font-bold">المواصفات التقنية</th>
+                            <th class="p-8 text-slate-400">الفضي</th>
+                            <th class="p-8 text-brand-gold">الذهبي</th>
+                            <th class="p-8 text-slate-400">البلاتيني</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-sm">
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">السبريد على العملات (من)</td><td class="p-6">1.2 Pips</td><td class="p-6">0.0 Pips</td><td class="p-6">0.0 Pips</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">العمولة (لوت قياسي)</td><td class="p-6">لا يوجد</td><td class="p-6">$7 لكل لوت</td><td class="p-6">لا يوجد</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">الرافعة المالية القصوى</td><td class="p-6">1:400</td><td class="p-6">1:400</td><td class="p-6">1:200</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">أدنى حجم صفقة</td><td class="p-6">0.01 Micro Lot</td><td class="p-6">0.01 Micro Lot</td><td class="p-6">0.10 Mini Lot</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">مستوى المارجن (Margin Call)</td><td class="p-6">100%</td><td class="p-6">100%</td><td class="p-6">100%</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">الإغلاق القسري (Stop Out)</td><td class="p-6">50%</td><td class="p-6">50%</td><td class="p-6">50%</td></tr>
+                        <tr class="hover:bg-white/5 transition"><td class="p-6 font-medium text-slate-300 text-base">خادم VPS مجاني</td><td class="p-6">✕</td><td class="p-6">✓</td><td class="p-6">✓</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-base border-y border-white/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-6 text-2xl font-black group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">1</div>
+                    <h4 class="text-white font-bold mb-2">تعبئة البيانات</h4>
+                    <p class="text-slate-500 text-xs">سجل بياناتك الشخصية في أقل من دقيقتين.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-6 text-2xl font-black group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">2</div>
+                    <h4 class="text-white font-bold mb-2">تحميل المستندات</h4>
+                    <p class="text-slate-500 text-xs">ارفع صورة الهوية أو جواز السفر للتحقق.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-6 text-2xl font-black group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">3</div>
+                    <h4 class="text-white font-bold mb-2">تمويل الحساب</h4>
+                    <p class="text-slate-500 text-xs">اختر طريقة الإيداع المناسبة لك بأمان.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-6 text-2xl font-black group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">4</div>
+                    <h4 class="text-white font-bold mb-2">ابدأ التداول</h4>
+                    <p class="text-slate-500 text-xs">انطلق في الأسواق العالمية فور تفعيل حسابك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative bg-brand-dark/50 border-t border-white/5 pt-24 pb-12 overflow-hidden text-right">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="edaa-icon"><div class="edaa-bar"></div><div class="edaa-bar" style="opacity: 0.7"></div><div class="edaa-bar" style="opacity: 0.4"></div></div>
+                        <span class="text-3xl font-bold text-white tracking-tight">إيداع</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-8 max-w-sm">المنصة الرائدة في حلول التداول المؤسسي. نوفر وصولاً مباشراً لأكثر من 1400 أصل مالي عالمي بأقل زمن استجابة وأعلى مستويات الأمان.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-brand-gold rounded-full"></span> أسواق التداول</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-brand-gold transition underline-offset-8">سوق الفوركس</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition underline-offset-8">الأسهم العالمية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-blue-500 rounded-full"></span> القانونية</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400 transition">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 flex items-center gap-2"><span class="w-1 h-4 bg-green-500 rounded-full animate-pulse"></span> النشرة البريدية</h4>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="البريد الإلكتروني" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none">
+                        <button class="w-full bg-brand-gold text-brand-dark font-black py-3 rounded-xl text-xs transition-all">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 py-12">
+                <div class="bg-red-500/5 rounded-[2rem] p-8 border border-red-500/10">
+                    <div class="flex items-center gap-3 text-red-400 mb-4 font-bold text-sm">⚠️ تحذير المخاطر العالية</div>
+                    <p class="text-slate-500 text-[11px] leading-7 text-justify">التداول في الأدوات المالية والعملات الأجنبية ينطوي على مخاطر عالية لخسارة رأس المال وقد لا يكون مناسباً لجميع فئات المستثمرين. الرافعة المالية هي سلاح ذو حدين، فقد تعمل لصالحك أو ضدك بشكل مضاعف. المحتوى المعروض ليس نصيحة مالية.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-500 font-medium">
+                <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full border border-brand-gold/10">Regulated Broker</span>
+                <span>&copy; 2026 شركة إيداع المالية. جميع الحقوق محفوظة.</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
