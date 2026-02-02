@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملتقى الأسواق المالية سيليكت 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#0B1F3B',   /* Deep Navy */
+                            dark: '#061224',   /* Darker Navy */
+                            gold: '#D4AF37',   /* Premium Gold */
+                            goldLight: '#F3E5AB',
+                        }
+                    },
+                    fontFamily: {
+  sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                    animation: {
+                        'scroll': 'scroll 40s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B1F3B;
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        /* Utilities */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F3E5AB, #D4AF37, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Phone Mockup Frame */
+        .phone-mockup {
+            border: 8px solid #2d3748;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            background: #0f172a;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 20px;
+            background: #2d3748;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            z-index: 10;
+        }
+
+        /* Logo Styles */
+        .edaa-icon { display: flex; flex-direction: column; gap: 3px; transform: skewX(-12deg); }
+        .edaa-bar { width: 26px; height: 5px; background: linear-gradient(90deg, #D4AF37, #F3E5AB); border-radius: 2px; }
+        
+        .slider-dot { width: 12px; height: 12px; background-color: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; transition: all 0.3s ease; cursor: pointer; }
+        .slider-dot.active { background-color: #D4AF37; transform: scale(1.3); opacity: 1; }
+    </style>
+</head>
+
+<body class="overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+
+
+<div id="menu-container"></div>
+
+<script>
+fetch("menu.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+
+    // re-bind JS after menu loads
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('invisible', 'opacity-0');
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('invisible', 'opacity-0');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+});
+</script>
+
+
+    <header class="relative h-screen w-full overflow-hidden bg-brand-dark">
+        <div id="hero-track" class="absolute inset-0 flex h-full transition-transform duration-[1500ms] ease-in-out">
+            <div class="min-w-full h-full relative"><div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div><div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/40 to-transparent"></div></div>
+            <div class="min-w-full h-full relative"><div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div><div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/40 to-transparent"></div></div>
+            <div class="min-w-full h-full relative"><div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div><div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/40 to-transparent"></div></div>
+            <div class="min-w-full h-full relative"><div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div><div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/40 to-transparent"></div></div>
+        </div>
+
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-20 pointer-events-none">
+            <div class="pointer-events-auto space-y-6 max-w-4xl">
+                <h2 class="text-lg md:text-xl text-brand-gold font-medium tracking-[0.3em] uppercase">القمة المالية العالمية</h2>
+                <h1 class="text-5xl md:text-8xl font-bold text-white leading-tight drop-shadow-2xl">ملتقى الأسواق المالية<br><span class="text-gold-gradient">سيليكت 2026</span></h1>
+                <div class="pt-8">
+                    <a href="#services" class="group relative inline-flex items-center gap-4 px-10 py-4 bg-white/5 backdrop-blur-md border border-white/20 rounded-full text-white transition-all duration-300 hover:bg-brand-gold hover:border-brand-gold hover:text-brand-dark hover:scale-105">
+                        <span class="text-lg font-bold">ابدأ رحلتك</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 w-full flex justify-between items-center px-10 z-30">
+            <button onclick="nextSlide()" class="p-4 rounded-full border border-white/10 text-white hover:bg-white hover:text-brand-dark transition-all backdrop-blur-sm"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+            <div class="flex gap-3">
+                <button onclick="goToSlide(0)" class="slider-dot active"></button>
+                <button onclick="goToSlide(1)" class="slider-dot"></button>
+                <button onclick="goToSlide(2)" class="slider-dot"></button>
+                <button onclick="goToSlide(3)" class="slider-dot"></button>
+            </div>
+            <button onclick="prevSlide()" class="p-4 rounded-full border border-white/10 text-white hover:bg-white hover:text-brand-dark transition-all backdrop-blur-sm"><svg class="w-6 h-6 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+        </div>
+    </header>
+
+    <section id="why-us" class="relative w-full py-24 px-6 bg-brand-base border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">لماذا تختار <span class="text-brand-gold">إيداع</span>؟</h2>
+                <p class="text-slate-400 text-lg">ارتقِ بتجربتك في التداول مع منتجات مبتكرة وشروط استثنائية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="md:col-span-2 glass-card rounded-3xl p-10 relative overflow-hidden group">
+                    <div class="absolute left-0 top-0 w-1/2 h-full opacity-30">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" class="w-full h-full object-cover invert opacity-20" alt="Map">
+                        <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-brand-gold rounded-full animate-ping"></div>
+                        <div class="absolute top-1/2 right-1/2 w-3 h-3 bg-brand-gold rounded-full animate-ping delay-700"></div>
+                    </div>
+                    
+                    <div class="relative z-10 max-w-xl">
+                        <h3 class="text-3xl font-bold text-white mb-4">مرخصة ومنظمة عالمياً</h3>
+                        <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                            شركة إيداع منظمة من قبل هيئة السوق المالية (CMA) وتخضع لأعلى معايير الرقابة المالية، لضمان بيئة تداول آمنة وموثوقة.
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:gap-4 transition-all">
+                            معلومات التراخيص <span class="rtl:rotate-180">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-10 relative overflow-hidden group hover:bg-brand-dark/50 transition-colors">
+                    <div class="mb-6 w-16 h-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">أمان وحماية</h3>
+                    <p class="text-slate-400">أموالك محفوظة في حسابات بنكية منفصلة ومحمية بأحدث بروتوكولات التشفير العالمية.</p>
+                </div>
+
+                <div class="glass-card rounded-3xl p-10 relative overflow-hidden group hover:bg-brand-dark/50 transition-colors">
+                    <div class="mb-6 w-16 h-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">منصة شاملة</h3>
+                    <p class="text-slate-400">تداول، استثمر، وحلل الأسواق. أكثر من 1400 أصل مالي في منصة واحدة فائقة السرعة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="start" class="relative w-full py-24 px-6 bg-brand-dark border-b border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">ابدأ التداول في دقائق</h2>
+                <p class="text-slate-400 text-lg">سجل بسرعة وسهولة من خلال عملية التسجيل المبسطة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center group">
+                    <div class="mb-8 relative w-[240px] h-[480px] phone-mockup transform group-hover:-translate-y-4 transition-transform duration-500">
+                        <div class="phone-notch"></div>
+                        <div class="h-full bg-slate-800 p-4 flex flex-col pt-12">
+                            <div class="text-xs text-slate-400 mb-2">تسجيل الدخول</div>
+                            <div class="h-8 bg-slate-700 rounded mb-4 w-3/4"></div>
+                            <div class="h-8 bg-slate-700 rounded mb-8 w-full"></div>
+                            <div class="h-10 bg-brand-gold rounded w-full mt-auto"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">1. سجل</h3>
+                    <p class="text-slate-400 text-sm">قم بالتسجيل وتحقق من بريدك الإلكتروني وهويتك في خطوات بسيطة.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center group">
+                    <div class="mb-8 relative w-[240px] h-[480px] phone-mockup transform group-hover:-translate-y-4 transition-transform duration-500 delay-100">
+                        <div class="phone-notch"></div>
+                        <div class="h-full bg-slate-800 p-4 flex flex-col pt-12">
+                            <div class="text-xs text-slate-400 mb-2">اختر طريقة الإيداع</div>
+                            <div class="h-12 bg-slate-700 rounded mb-3 flex items-center px-2"><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
+                            <div class="h-12 bg-slate-700 rounded mb-3 flex items-center px-2"><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
+                            <div class="h-12 bg-slate-700 rounded mb-3 flex items-center px-2"><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">2. أودع</h3>
+                    <p class="text-slate-400 text-sm">قم بتمويل حسابك باستخدام طرق دفع آمنة وشفافة.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center group">
+                    <div class="mb-8 relative w-[240px] h-[480px] phone-mockup transform group-hover:-translate-y-4 transition-transform duration-500 delay-200">
+                        <div class="phone-notch"></div>
+                        <div class="h-full bg-slate-800 p-4 flex flex-col pt-12">
+                            <div class="text-xs text-slate-400 mb-2">EUR/USD</div>
+                            <div class="h-40 bg-gradient-to-t from-green-500/20 to-transparent w-full rounded-lg mb-4 relative">
+                                <svg class="absolute bottom-0 w-full h-full text-green-500" viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 50 L20 40 L40 45 L60 20 L80 30 L100 10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <div class="flex gap-2 mt-auto">
+                                <div class="h-10 bg-green-600 rounded flex-1"></div>
+                                <div class="h-10 bg-red-600 rounded flex-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">3. تداول</h3>
+                    <p class="text-slate-400 text-sm">وصول إلى أكثر من 1400 أصل، من الأسهم العالمية إلى الذهب.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="relative w-full py-24 px-6 bg-brand-base border-b border-white/5 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold/5 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">حلول مصممة <span class="text-gold-gradient">للمستقبل</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">نبتكر الأدوات المالية التي تمنحك الأفضلية في الأسواق العالمية المتغيرة.</p>
+            </div>
+            
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex bg-brand-dark/50 p-1.5 rounded-2xl border border-white/10 backdrop-blur-md">
+                    <button onclick="switchTab('unlisted')" id="tab-unlisted" class="service-tab px-8 py-3 rounded-xl text-sm font-bold transition-all duration-300 bg-brand-gold text-brand-dark">الشركات</button>
+                    <button onclick="switchTab('issuers')" id="tab-issuers" class="service-tab px-8 py-3 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all duration-300">المصدرين</button>
+                    <button onclick="switchTab('investors')" id="tab-investors" class="service-tab px-8 py-3 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all duration-300">المستثمرين</button>
+                </div>
+            </div>
+
+            <div id="services-content" class="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500">
+                </div>
+        </div>
+    </section>
+<div class="w-full bg-brand-dark border-y border-white/5 py-1">
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+            "symbols": [
+                {"proName": "FX_IDC:EURUSD", "title": "EUR/USD"},
+                {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+                {"proName": "OANDA:XAUUSD", "title": "الذهب"},
+                {"proName": "TVC:USOIL", "title": "النفط"},
+                {"proName": "FOREXCOM:SPX500", "title": "S&P 500"},
+                {"proName": "NASDAQ:AAPL", "title": "Apple"}
+            ],
+            "showSymbolLogo": true, "colorTheme": "dark", "isTransparent": true, "displayMode": "adaptive", "locale": "ar_AE"
+        }
+        </script>
+    </div>
+</div>
+    <section id="markets" class="w-full bg-brand-dark border-b border-white/5">
+        <div class="text-center py-20 bg-brand-base">
+            <h2 class="text-4xl font-bold text-white mb-4">الأسواق العالمية</h2>
+            <p class="text-slate-400 text-lg">تداول في 4 أسواق رئيسية من منصة واحدة فائقة التطور</p>
+        </div>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-white/5">
+            <div class="group relative h-[450px] overflow-hidden border-b border-white/5 md:border-l">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                <div class="absolute inset-0 bg-brand-base/80 group-hover:bg-brand-base/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+                    <h3 class="text-4xl font-bold text-white mb-2">الفوركس</h3>
+                    <p class="text-slate-300 max-w-xs opacity-80 group-hover:opacity-100 transition-opacity">أزواج العملات العالمية الرئيسية والثانوية بأفضل فروق أسعار.</p>
+                </div>
+            </div>
+            <div class="group relative h-[450px] overflow-hidden border-b border-white/5 md:border-l">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                <div class="absolute inset-0 bg-brand-base/80 group-hover:bg-brand-base/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+                    <h3 class="text-4xl font-bold text-white mb-2">الأسهم</h3>
+                    <p class="text-slate-300 max-w-xs opacity-80 group-hover:opacity-100 transition-opacity">امتلك حصصاً في كبرى الشركات العالمية والأسواق الناشئة.</p>
+                </div>
+            </div>
+            <div class="group relative h-[450px] overflow-hidden border-b border-white/5 md:border-l">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518544862322-b44c802b66d3?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110"></div>
+                <div class="absolute inset-0 bg-brand-base/80 group-hover:bg-brand-base/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+                    <h3 class="text-4xl font-bold text-white mb-2">السلع</h3>
+                    <p class="text-slate-300 max-w-xs opacity-80 group-hover:opacity-100 transition-opacity">تداول الذهب، الفضة، والنفط بمرونة عالية وسيولة عالمية.</p>
+                </div>
+            </div>
+            <div class="group relative h-[450px] overflow-hidden border-b border-white/5">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="filter: hue-rotate(90deg);"></div>
+                <div class="absolute inset-0 bg-brand-base/80 group-hover:bg-brand-base/60 transition-all duration-500"></div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+                    <h3 class="text-4xl font-bold text-white mb-2">المؤشرات</h3>
+                    <p class="text-slate-300 max-w-xs opacity-80 group-hover:opacity-100 transition-opacity">الوصول إلى أهم مؤشرات البورصات العالمية مثل S&P 500 و Dow Jones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="accounts" class="relative w-full py-24 px-6 bg-brand-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">اختر خطتك <span class="text-brand-gold">الاحترافية</span></h2>
+                <p class="text-slate-400">هياكل تسعير شفافة تضع نجاحك في المقدمة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <div class="glass-card rounded-[2.5rem] p-10 border border-white/5 hover:bg-white/5 transition-all duration-500 flex flex-col group">
+                    <div class="mb-6">
+                        <span class="text-slate-400 font-bold tracking-widest uppercase text-xs">Standard</span>
+                        <h3 class="text-3xl font-bold text-white mt-2">الفضي</h3>
+                    </div>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-5xl font-black text-white">$500</span>
+                        <span class="text-slate-500 text-sm">/ إيداع أدنى</span>
+                    </div>
+                    <ul class="space-y-5 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> سبريد منخفض 1.2 نقطة</li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> رافعة مالية تصل 1:400</li>
+                        <li class="flex items-center gap-3 text-slate-500 text-sm opacity-50"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> مدير حساب شخصي</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-2xl border border-white/20 text-white font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">فتح حساب</button>
+                </div>
+
+                <div class="relative rounded-[2.5rem] p-10 bg-gradient-to-b from-brand-gold/20 to-brand-dark border-2 border-brand-gold shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)] transform md:scale-110 z-10 flex flex-col">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 rounded-full text-xs font-black tracking-widest uppercase shadow-xl">الأكثر طلباً</div>
+                    <div class="mb-6 text-center">
+                        <span class="text-brand-gold font-bold tracking-widest uppercase text-xs">Premium Experience</span>
+                        <h3 class="text-4xl font-bold text-white mt-2">الذهبي</h3>
+                    </div>
+                    <div class="flex items-baseline justify-center gap-1 mb-8 border-b border-brand-gold/20 pb-8">
+                        <span class="text-6xl font-black text-white">$5,000</span>
+                    </div>
+                    <ul class="space-y-5 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> سبريد يبدأ من 0.0 نقطة</li>
+                        <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> أولوية في السحب والإيداع</li>
+                        <li class="flex items-center gap-3 text-white text-sm font-medium"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> مدير حساب خاص 24/5</li>
+                    </ul>
+                    <button class="w-full py-5 rounded-2xl bg-brand-gold text-brand-dark font-black hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-lg">ابدأ التداول الاحترافي</button>
+                </div>
+
+                <div class="glass-card rounded-[2.5rem] p-10 border border-white/5 hover:bg-white/5 transition-all duration-500 flex flex-col group">
+                    <div class="mb-6">
+                        <span class="text-slate-400 font-bold tracking-widest uppercase text-xs">Elite</span>
+                        <h3 class="text-3xl font-bold text-white mt-2">البلاتيني</h3>
+                    </div>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-5xl font-black text-white">$20k+</span>
+                    </div>
+                    <ul class="space-y-5 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> عمولات صفرية بالكامل</li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> الوصول لغرفة التداول</li>
+                        <li class="flex items-center gap-3 text-slate-300 text-sm"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> تقارير تحليلية مخصصة</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-2xl border border-white/20 text-white font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">تواصل مع النخبة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="offices" class="w-full py-0 bg-brand-dark overflow-hidden">
+    <div class="py-20 text-center px-4 bg-brand-dark">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">حضورنا <span class="text-brand-gold">العالمي</span></h2>
+        <p class="text-slate-400">شبكة استراتيجية تربطك بأهم المراكز المالية في العالم.</p>
+    </div>
+
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-0">
+        
+        <div class="relative h-[600px] w-full group overflow-hidden border-b md:border-b-0 md:border-l border-white/10">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?q=80&w=2070&auto=format&fit=crop" 
+                     class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" alt="Riyadh Office">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700"></div>
+            </div>
+
+            <div class="relative z-10 h-full flex flex-col justify-end p-12 md:p-20 text-right">
+                <span class="text-brand-gold font-bold tracking-[0.3em] uppercase text-sm mb-4 block">المقر الرئيسي</span>
+                <h3 class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">الرياض</h3>
+                <p class="text-slate-200 text-lg md:text-xl max-w-md">المملكة العربية السعودية <br> مركز الملك عبدالله المالي (KAFD)</p>
+                <div class="mt-8 w-20 h-1 bg-brand-gold transition-all duration-500 group-hover:w-40"></div>
+            </div>
+        </div>
+
+        <div class="relative h-[600px] w-full group overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop" 
+                     class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" alt="London Office">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-base via-brand-base/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700"></div>
+            </div>
+
+            <div class="relative z-10 h-full flex flex-col justify-end p-12 md:p-20 text-left">
+                <span class="text-brand-gold font-bold tracking-[0.3em] uppercase text-sm mb-4 block">المركز الدولي</span>
+                <h3 class="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">لندن</h3>
+                <p class="text-slate-200 text-lg md:text-xl max-w-md">المملكة المتحدة <br> كناري وارف، حي المال البريطاني</p>
+                <div class="mt-8 w-20 h-1 bg-brand-gold transition-all duration-500 group-hover:w-40 ml-auto md:ml-0"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="py-32 bg-brand-dark border-t border-white/5 relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20">
+            <h3 class="text-brand-gold font-bold tracking-[0.4em] uppercase text-xs mb-4">World Class Recognition</h3>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white">إنجازات <span class="text-gold-gradient">عالمية</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            
+            <div class="flex flex-col items-center group cursor-default">
+                <div class="relative w-32 h-32 mb-8 transform transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
+                    <div class="absolute inset-0 rounded-full border-2 border-dashed border-brand-gold/30 animate-[spin_20s_linear_infinite]"></div>
+                    <div class="absolute inset-2 rounded-full bg-gradient-to-br from-brand-gold via-brand-goldLight to-brand-gold p-[2px] shadow-[0_0_30px_-5px_rgba(212,175,55,0.5)]">
+                        <div class="w-full h-full rounded-full bg-brand-dark flex flex-col items-center justify-center border border-brand-gold/20">
+                            <span class="text-brand-gold font-black text-xl leading-none">2025</span>
+                            <div class="w-8 h-[1px] bg-brand-gold/50 my-1"></div>
+                            <span class="text-[10px] text-white/70 uppercase font-bold tracking-tighter">Winner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition-colors">أفضل وسيط مالي</h4>
+                    <p class="text-slate-500 text-sm max-w-[200px] mx-auto leading-relaxed">جوائز فوركس العالمية دبي</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center group cursor-default">
+                <div class="relative w-32 h-32 mb-8 transform transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 rounded-full border-2 border-brand-gold/20 animate-pulse"></div>
+                    <div class="absolute inset-2 rounded-full bg-gradient-to-br from-brand-gold via-brand-goldLight to-brand-gold p-[2px] shadow-[0_0_40px_-10px_rgba(212,175,55,0.6)]">
+                        <div class="w-full h-full rounded-full bg-brand-dark flex flex-col items-center justify-center border border-brand-gold/20">
+                            <svg class="w-8 h-8 text-brand-gold mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
+                            <span class="text-[9px] text-white font-bold uppercase tracking-widest leading-none">Top Rated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition-colors">أفضل منصة تداول</h4>
+                    <p class="text-slate-500 text-sm max-w-[200px] mx-auto leading-relaxed">قمة التكنولوجيا المالية لندن</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center group cursor-default">
+                <div class="relative w-32 h-32 mb-8 transform transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 rounded-full border-2 border-dotted border-brand-gold/40 animate-[spin_10s_linear_infinite]"></div>
+                    <div class="absolute inset-2 rounded-full bg-gradient-to-br from-brand-gold via-brand-base to-brand-gold p-[2px] shadow-[0_0_30px_-5px_rgba(212,175,55,0.5)]">
+                        <div class="w-full h-full rounded-full bg-brand-dark flex flex-col items-center justify-center border border-brand-gold/20">
+                            <span class="text-brand-gold font-black text-2xl">A+</span>
+                            <span class="text-[8px] text-white/70 uppercase font-bold tracking-widest">Execution Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-brand-gold transition-colors">أسرع تنفيذ أوامر</h4>
+                    <p class="text-slate-500 text-sm max-w-[200px] mx-auto leading-relaxed">مجلة المال والاستثمار العالمية</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="relative bg-brand-dark/50 border-t border-white/5 pt-24 pb-12 overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20 text-right">
+            
+            <div class="lg:col-span-2 space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="edaa-icon">
+                        <div class="edaa-bar"></div>
+                        <div class="edaa-bar" style="opacity: 0.7"></div>
+                        <div class="edaa-bar" style="opacity: 0.4"></div>
+                    </div>
+                    <span class="text-3xl font-bold text-white tracking-tight">إيداع</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-8 max-w-sm">
+                    المنصة الرائدة في حلول التداول المؤسسي. نوفر وصولاً مباشراً لأكثر من 1400 أصل مالي عالمي بأقل زمن استجابة وأعلى مستويات الأمان التنظيمي.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-500 shadow-lg shadow-brand-gold/5">X</a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-500 shadow-lg shadow-brand-gold/5">IN</a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-500 shadow-lg shadow-brand-gold/5">FB</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-8 flex items-center gap-2">
+                    <span class="w-1 h-4 bg-brand-gold rounded-full"></span>
+                    أسواق التداول
+                </h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#markets" class="text-slate-400 hover:text-brand-gold transition-colors underline-offset-8 hover:underline">سوق الفوركس</a></li>
+                    <li><a href="#markets" class="text-slate-400 hover:text-brand-gold transition-colors underline-offset-8 hover:underline">الأسهم العالمية</a></li>
+                    <li><a href="#markets" class="text-slate-400 hover:text-brand-gold transition-colors underline-offset-8 hover:underline">المؤشرات والسلع</a></li>
+                    <li><a href="#accounts" class="text-slate-400 hover:text-brand-gold transition-colors underline-offset-8 hover:underline">حسابات الـ ECN</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-8 flex items-center gap-2">
+                    <span class="w-1 h-4 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+                    القانونية والدعم
+                </h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">شروط الاستخدام</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">سياسة الخصوصية</a></li>
+                    <li><a href="#offices" class="text-slate-400 hover:text-blue-400 transition-colors">مكاتبنا العالمية</a></li>
+                    <li><a href="#faq" class="text-slate-400 hover:text-blue-400 transition-colors">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-8 flex items-center gap-2">
+                    <span class="w-1 h-4 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
+                    النشرة البريدية
+                </h4>
+                <form class="space-y-4">
+                    <div class="relative group">
+                        <input type="email" placeholder="البريد الإلكتروني" 
+                               class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs focus:border-brand-gold text-white outline-none transition-all group-hover:border-white/20">
+                    </div>
+                    <button class="w-full bg-brand-gold hover:bg-white text-brand-dark font-black py-3 rounded-xl text-xs transition-all shadow-xl shadow-brand-gold/10 active:scale-95">
+                        اشترك الآن
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-white/5 py-12">
+            <div class="bg-red-500/5 rounded-[2rem] p-8 border border-red-500/10 backdrop-blur-sm">
+                <div class="flex items-center gap-3 text-red-400 mb-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h5 class="font-bold text-sm tracking-wide">تحذير المخاطر العالية</h5>
+                </div>
+                <p class="text-slate-500 text-[11px] leading-7 text-justify">
+                    التداول في الأدوات المالية والعملات الأجنبية ينطوي على مخاطر عالية لخسارة رأس المال وقد لا يكون مناسباً لجميع فئات المستثمرين. الرافعة المالية هي سلاح ذو حدين، فقد تعمل لصالحك أو ضدك بشكل مضاعف. قبل البدء، يرجى التأكد من استيعابك الكامل للمخاطر وتحديد أهدافك الاستثمارية بدقة. المحتوى المعروض ليس نصيحة مالية، وشركة إيداع غير مسؤولة عن نتائج قراراتك الاستثمارية.
+                </p>
+            </div>
+        </div>
+
+        <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4 text-[10px] text-slate-500 font-medium">
+                <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full border border-brand-gold/10">Regulated Broker</span>
+                <span>&copy; 2026 شركة إيداع المالية. جميع الحقوق محفوظة.</span>
+            </div>
+            <div class="flex gap-8 items-center opacity-40 hover:opacity-100 transition-opacity">
+                <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase">PCI Secure</span>
+                <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase">SSL Encrypted</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const track = document.getElementById('hero-track');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        function updateSlider() { track.style.transform = `translateX(${currentSlide * 100}%)`; dots.forEach((d, i) => i === currentSlide ? d.classList.add('active') : d.classList.remove('active')); }
+        function nextSlide() { currentSlide = (currentSlide + 1) % 4; updateSlider(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + 4) % 4; updateSlider(); }
+        function goToSlide(i) { currentSlide = i; updateSlider(); }
+        setInterval(nextSlide, 5000);
+
+
+//start of menu java
+        const menu = document.getElementById('mobile-menu');
+        function toggleMenu() {
+            if (menu.classList.contains('translate-x-full')) { menu.classList.remove('translate-x-full'); menu.classList.add('translate-x-0'); }
+            else { menu.classList.add('translate-x-full'); menu.classList.remove('translate-x-0'); }
+        }
+        document.getElementById('mobile-menu-btn').onclick = toggleMenu;
+        document.getElementById('close-menu').onclick = toggleMenu;
+
+//sctipt menu last 
+
+
+        const servicesData = {
+            unlisted: [
+                { title: "نقل ملكية ذكي", desc: "عمليات رقمية مؤتمتة بالكامل لنقل الأوراق المالية بسرعة فائقة وأمان مطلق عبر تقنياتنا المشفرة.", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+                { title: "حفظ الأصول الرقمية", desc: "إدارة مركزية متطورة تتيح للمؤسسات مراقبة وتخزين أصولها الاستثمارية بوضوح تام وشفافية.", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04" },
+                { title: "توزيع الأرباح", desc: "نظام آلي متكامل لإدارة صرف الأرباح للمساهمين بدقة متناهية وتقارير فورية مفصلة.", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2" }
+            ],
+            issuers: [
+                { title: "إدارة الجمعيات", desc: "تنظيم اجتماعات الجمعية العمومية إلكترونياً مع نظام تصويت شفاف وموثق.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7" },
+                { title: "سجل المساهمين", desc: "تحديث فوري لسجلات المساهمين ومتابعة التغيرات في هيكل الملكية بدقة.", icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10" },
+                { title: "تقارير الإدراج", desc: "إصدار تقارير دورية تتماشى مع متطلبات هيئة السوق المالية والجهات التنظيمية.", icon: "M9 17v-2m3 2v-4m3 4v-6" }
+            ],
+            investors: [
+                { title: "محفظة استثمارية", desc: "لوحة تحكم واحدة لمتابعة كافة استثماراتك في الشركات المدرجة وغير المدرجة.", icon: "M3 10h18M7 15h1m4 0h1" },
+                { title: "تحليل السوق", desc: "أدوات تحليلية متقدمة مبنية على الذكاء الاصطناعي لاكتشاف الفرص القادمة.", icon: "M16 8v8m-4-5v5m-4-2v2" },
+                { title: "تنبيهات فورية", desc: "ابق على اطلاع دائم بكل حركة في السوق وتغييرات أسعار الأصول لحظة بلحظة.", icon: "M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11" }
+            ]
+        };
+
+        function switchTab(name) {
+            document.querySelectorAll('.service-tab').forEach(b => {
+                b.classList.remove('bg-brand-gold', 'text-brand-dark');
+                b.classList.add('text-slate-400');
+            });
+            const activeBtn = document.getElementById('tab-' + name);
+            activeBtn.classList.add('bg-brand-gold', 'text-brand-dark');
+            activeBtn.classList.remove('text-slate-400');
+
+            const contentDiv = document.getElementById('services-content');
+            contentDiv.innerHTML = servicesData[name].map(item => `
+                <div class="glass-card rounded-3xl p-8 border border-white/5 hover:border-brand-gold/30 transition-all duration-500 group animate-[fadeIn_0.5s_ease-out]">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-gold/20 to-transparent flex items-center justify-center mb-8 text-brand-gold group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="${item.icon}"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">${item.title}</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm text-center">${item.desc}</p>
+                </div>
+            `).join('');
+        }
+        switchTab('unlisted');
+    </script>
+</body>
+</html>
