@@ -1,0 +1,70 @@
+
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-lg border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center">
+            <img src="logo.png" alt="EDAA Logo" class="h-10 w-auto object-contain">
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="about.html" class="hover:text-brand-gold transition py-2">عن الشركة</a>
+            <a href="trading.html" class="hover:text-brand-gold transition py-2">التداول</a>
+            <a href="market.html" class="hover:text-brand-gold transition py-2">الأسواق</a>
+            <a href="accounts.html" class="hover:text-brand-gold transition py-2">الحسابات</a>
+            <a href="payments.html" class="hover:text-brand-gold transition py-2">الإيداع والسحب</a>
+            <a href="contactus.html" class="px-5 py-2 rounded-lg border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-black transition-all duration-300">
+                اتصل بنا
+            </a>
+        </div>
+
+        <button class="md:hidden text-white p-2 group" id="mobile-menu-btn">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+    </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300">
+    
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-xl"></div>
+
+    <div class="relative h-full flex flex-col pt-24 px-6 pb-10">
+        
+        <button id="close-menu" class="absolute top-6 left-6 text-white p-2 border border-white/20 rounded-full hover:border-brand-gold hover:text-brand-gold transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="flex flex-col gap-6 mt-8">
+            <a href="about.html" class="mobile-link text-xl font-bold text-slate-200 hover:text-brand-gold border-b border-white/5 pb-4 transition-colors">عن الشركة</a>
+            <a href="trading.html" class="mobile-link text-xl font-bold text-slate-200 hover:text-brand-gold border-b border-white/5 pb-4 transition-colors">التداول</a>
+            <a href="market.html" class="mobile-link text-xl font-bold text-slate-200 hover:text-brand-gold border-b border-white/5 pb-4 transition-colors">الأسواق</a>
+            <a href="accounts.html" class="mobile-link text-xl font-bold text-slate-200 hover:text-brand-gold border-b border-white/5 pb-4 transition-colors">الحسابات</a>
+            <a href="payments.html" class="mobile-link text-xl font-bold text-slate-200 hover:text-brand-gold border-b border-white/5 pb-4 transition-colors">الإيداع والسحب</a>
+            <a href="contactus.html" class="mobile-link text-xl font-bold text-brand-gold border border-brand-gold rounded-xl p-4 text-center mt-4 hover:bg-brand-gold hover:text-black transition-colors">اتصل بنا</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('invisible', 'opacity-0');
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('invisible', 'opacity-0');
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+</script>
